@@ -1,126 +1,243 @@
-.nav {
-  height: 60px;
-  background-color: #20232a;
-  color: #61dafb;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 30px;
-  font-weight: 700;
-  font-size: 1.2rem;
-  letter-spacing: 0.05em;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
-  user-select: none;
+:root {
+  /* Warna dan variabel global */
+  --primary-color: #1e88e5;
+  --secondary-color: #42a5f5;
+  --background-color: #f5f7fa;
+  --text-color: #333;
+  --danger-color: #dc3545;
+  --border-radius: 8px;
+  --transition: 0.3s ease;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Reset dasar dan standar global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color var(--transition);
+}
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* === Navbar === */
+nav.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
   z-index: 1000;
 }
-
-.nav .logo {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.4rem;
-  letter-spacing: 0.1em;
+.navbar .nav-link {
+  font-weight: 500;
+  transition: color var(--transition);
+}
+.navbar .nav-link:hover {
+  color: var(--secondary-color);
+}
+.with-navbar-padding,
+.pt-navbar {
+  padding-top: 80px !important; /* Menghindari konten tertutup navbar */
 }
 
-.nav .links {
-  display: flex;
-  gap: 25px;
-}
-
-.nav .links a {
-  color: #61dafb;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.nav .links a.router-link-exact-active,
-.nav .links a:hover {
-  background-color: #61dafb;
-  color: #20232a;
-  box-shadow: 0 0 8px #61dafb;
-}
-
-
-.sidebar {
-  width: 200px;
-  background-color: #f8f9fa;
-  padding: 25px 20px;
-  box-shadow: 2px 0 8px rgba(0,0,0,0.05);
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 600;
-  color: #333;
-  user-select: none;
-  height: calc(100vh - 60px);
-  position: sticky;
-  top: 60px;
-  border-radius: 0 8px 8px 0;
-  overflow-y: auto;
-}
-
-.sidebar h3 {
-  font-size: 1.3rem;
-  margin-bottom: 15px;
-  color: #222;
-  letter-spacing: 0.04em;
-}
-
-.sidebar a {
-  color: #333;
-  padding: 8px 14px;
-  border-radius: 8px;
-  transition: background-color 0.25s ease, color 0.25s ease;
-  text-decoration: none;
-  font-size: 1rem;
-  display: block;
-}
-
-.sidebar a.router-link-exact-active {
-  background-color: #61dafb;
+/* === Hero Section di Homepage === */
+.hero-section {
+  background: linear-gradient(to right, #1976d2, #42a5f5);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   color: white;
-  box-shadow: 0 0 10px #61dafb;
+  padding: 3rem 0;
 }
 
-.sidebar a:hover {
-  background-color: #a7d8fb;
-  color: #222;
-  box-shadow: none;
+/* === Search Bar di halaman kategori/materi === */
+.search-wrapper {
+  position: relative;
+  max-width: 600px;
+}
+.search-input {
+  padding-right: 3rem;
+  border-radius: var(--border-radius);
+  height: 45px;
+  font-size: 1rem;
+}
+.btn-search {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 35px;
+  width: 35px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-search:hover {
+  background-color: #0b5ed7;
 }
 
-
-main {
-  flex-grow: 1;
-  padding: 30px 40px;
-  background-color: white;
-  box-shadow: inset 0 0 15px #ddd;
-  border-radius: 8px;
-  overflow-y: auto;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #222;
-  line-height: 1.6;
-  font-size: 1.1rem;
+/* === Formulir & Tombol === */
+button,
+input,
+select,
+textarea {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: var(--border-radius);
+  transition: all var(--transition);
+}
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--secondary-color);
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 4px var(--primary-color);
 }
 
-#app {
+/* Styling form login/register */
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  gap: 1rem;
 }
 
-.content-wrapper {
-  display: flex;
-  flex-grow: 1;
-  overflow: hidden;
+/* === Card === */
+.card {
+  border-radius: var(--border-radius);
+  border: 1px solid #dee2e6;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform var(--transition);
+}
+.card:hover {
+  transform: translateY(-4px);
+}
+.card-title {
+  font-weight: 600;
+}
+.card-text {
+  color: var(--text-color);
+}
+.card-body {
+  padding: 1rem;
 }
 
-
-.sidebar {
-  flex-shrink: 0;
+/* === Kategori === */
+.kategori-card {
+  transition: transform var(--transition), background-color var(--transition);
+  border: 1px solid #dee2e6;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+.kategori-card:hover {
+  transform: scale(1.03);
+  background-color: #f0f8ff;
 }
 
-main {
-  flex-grow: 1;
-  overflow-y: auto;
+/* === Alert Info dan Error === */
+.alert {
+  padding: 1rem;
+  border-radius: var(--border-radius);
+}
+.alert-info {
+  background-color: #e3f2fd;
+  color: #0d6efd;
+}
+.alert-danger {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+/* === Tombol Favorit === */
+.btn-favorit {
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--danger-color);
+  background-color: #fff;
+  border: 1px solid var(--danger-color);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.btn-favorit:hover {
+  background-color: var(--danger-color);
+  color: white;
+}
+.btn-favorit i {
+  transition: transform 0.3s ease;
+}
+.btn-favorit:hover i {
+  transform: scale(1.15);
+}
+.btn-favorit.favorited {
+  background-color: var(--danger-color);
+  color: white;
+  border-color: var(--danger-color);
+}
+.btn-favorit.favorited:hover {
+  background-color: #c82333;
+  border-color: #c82333;
+}
+
+/* === Typography === */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* === Responsive (Mobile) === */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  .card-title {
+    font-size: 1rem;
+  }
+  .search-wrapper {
+    width: 100%;
+  }
+}
+
+/* === Ekstra untuk animasi kartu === */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* === Penyesuaian padding jika ada navbar === */
+.pt-navbar {
+  padding-top: 80px;
+}
+.with-navbar-padding {
+  padding-top: 35px;
 }

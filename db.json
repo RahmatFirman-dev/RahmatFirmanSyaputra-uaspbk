@@ -1,0 +1,84 @@
+{
+  "materi": [
+    {
+      "id": "1",
+      "judul": "Dasar HTML",
+      "deskripsi": "Tag dan struktur HTML dasar",
+      "isi": "🔰 Pengertian HTML\nHTML (HyperText Markup Language) adalah bahasa markup standar untuk menyusun halaman web. HTML bukan bahasa pemrograman, tetapi merupakan pondasi utama sebuah halaman web. HTML menentukan heading, paragraf, tautan, gambar, tabel, daftar, dan struktur layout lainnya.\n\n🧱 Struktur Dasar HTML:\n```html",
+      "kategori": "HTML",
+      "favorit": false
+    },
+    {
+      "id": "2",
+      "judul": "CSS Dasar",
+      "deskripsi": "Belajar styling dasar dengan CSS",
+      "isi": "🎨 CSS (Cascading Style Sheets) digunakan untuk mendesain tampilan halaman HTML.\n\n📘 Contoh dasar:\n```css\nbody {\n  background-color: #f5f5f5;\n  color: #333;\n  font-family: Arial;\n}\n```\n\n🧱 Komponen Utama:\n- Selector (Elemen, class, ID)\n- Properti (property)\n- Nilai (value)\n\n💡 Jenis Selector:\n- Elemen: `p`, `h1`\n- Class: `.judul`\n- ID: `#utama`\n\n⚙️ Properti Populer:\n- `color`, `background-color`\n- `margin`, `padding`\n- `font-size`, `text-align`, `display`\n\n📌 CSS mendukung responsive design, animasi, dan transisi.",
+      "kategori": "CSS",
+      "favorit": false
+    },
+    {
+      "id": "3",
+      "judul": "JavaScript Variabel",
+      "deskripsi": "Belajar membuat variabel JS",
+      "isi": "💡 Variabel menyimpan data yang akan digunakan dalam logika program JavaScript.\n\n🧠 Tiga Cara Deklarasi:\n```js\nvar x = 10; // lama\nlet y = 20; // baru\nconst z = 30; // tidak bisa diubah\n```\n\n📊 Tipe Data:\n- String: \"Halo\"\n- Number: 123\n- Boolean: true/false\n- Array: [1, 2, 3]\n- Object: { nama: \"Andi\" }\n\n📌 Variabel digunakan dalam fungsi, kondisi, perulangan, dan manipulasi DOM.",
+      "kategori": "JavaScript",
+      "favorit": false
+    },
+    {
+      "id": "4",
+      "judul": "Vue 3 Composition API",
+      "deskripsi": "Struktur baru Vue 3 dengan setup()",
+      "isi": "🧱 Composition API adalah pendekatan baru dalam Vue 3 yang memungkinkan logika komponen lebih modular.\n\n📘 Contoh:\n```vue\n<script setup>\nimport { ref } from 'vue'\nconst count = ref(0)\n</script>\n\n<template>\n  <button @click=\"count++\">{{ count }}</button>\n</template>\n```\n\n💡 Keuntungan:\n- Lebih fleksibel dan reusable\n- Lebih mudah dikelola di proyek besar\n- Mendukung TypeScript dengan baik",
+      "kategori": "Vue.js",
+      "favorit": false
+    },
+    {
+      "id": "5",
+      "judul": "Bootstrap Grid System",
+      "deskripsi": "Cara menggunakan grid responsive",
+      "isi": "📐 Bootstrap menggunakan sistem grid 12 kolom untuk tata letak responsif.\n\n📘 Contoh dasar:\n```html\n<div class=\"row\">\n  <div class=\"col-md-6\">Kolom Kiri</div>\n  <div class=\"col-md-6\">Kolom Kanan</div>\n</div>\n```\n\n⚙️ Grid memungkinkan layout adaptif untuk berbagai ukuran layar.\n\n📌 Gunakan breakpoint seperti:\n- `col-sm-`, `col-md-`, `col-lg-` untuk mengatur responsivitas.",
+      "kategori": "Bootstrap",
+      "favorit": false
+    },
+    {
+      "id": "6",
+      "judul": "Tailwind CSS Utility Classes",
+      "deskripsi": "Konsep atomic CSS",
+      "isi": "🌀 Tailwind CSS adalah framework CSS berbasis utility class. Setiap class melakukan satu tugas spesifik.\n\n📘 Contoh:\n```html\n<div class=\"bg-blue-500 text-white p-4 rounded\">\n  Ini konten dengan Tailwind\n</div>\n```\n\n🔍 Keuntungan:\n- Cepat tanpa harus menulis CSS kustom\n- Cocok untuk prototyping\n\n📌 Class populer: `p-4`, `m-2`, `text-xl`, `bg-gray-200`, `flex`, `grid`, `rounded`.",
+      "kategori": "Tailwind CSS",
+      "favorit": false
+    },
+    {
+      "id": "7",
+      "judul": "Dasar Git",
+      "deskripsi": "Version Control System",
+      "isi": "🔄 Git adalah sistem version control untuk melacak perubahan kode secara efisien.\n\n📘 Perintah Dasar:\n```bash\ngit init\ngit add .\ngit commit -m \"Initial commit\"\ngit push origin main\n```\n\n🧠 Konsep:\n- Commit: Snapshot kode\n- Branch: Jalur pengembangan\n- Merge: Gabungkan branch\n\n📌 Gunakan bersama GitHub untuk kolaborasi tim.",
+      "kategori": "Git & GitHub",
+      "favorit": false
+    },
+    {
+      "id": "8",
+      "judul": "REST API 101",
+      "deskripsi": "Konsep dasar REST dan endpoint",
+      "isi": "🌐 REST API digunakan untuk komunikasi data antara client dan server melalui HTTP.\n\n📘 HTTP Methods:\n- GET: Ambil data\n- POST: Tambah data\n- PUT: Update data\n- DELETE: Hapus data\n\n📦 Contoh Endpoint:\n```http\nGET /users\nPOST /users\nPUT /users/1\nDELETE /users/1\n```\n\n📌 Digunakan dengan axios atau fetch di frontend.",
+      "kategori": "REST API",
+      "favorit": false
+    },
+    {
+      "id": "9",
+      "judul": "Media Queries CSS",
+      "deskripsi": "Responsive dengan media queries",
+      "isi": "📱 Media queries memungkinkan halaman web menyesuaikan tampilannya dengan ukuran layar.\n\n📘 Contoh:\n```css\n@media (max-width: 768px) {\n  .container {\n    flex-direction: column;\n  }\n}\n```\n\n🎯 Digunakan bersama Flexbox atau Grid Layout untuk desain yang adaptif dan user-friendly.",
+      "kategori": "Responsive Design",
+      "favorit": false
+    },
+    {
+      "id": "10",
+      "judul": "React Props & State",
+      "deskripsi": "Dasar komponen React",
+      "isi": "⚛️ React adalah library untuk membangun UI berbasis komponen.\n\n📌 Props digunakan untuk mengirim data dari parent ke child:\n```js\n<MyComponent title=\"Halo\" />\n```\n\n📌 State digunakan untuk menyimpan data internal:\n```js\nconst [count, setCount] = useState(0)\n```\n\n🧠 Props bersifat readonly, sedangkan state bisa diubah. Gunakan `useEffect()` untuk efek samping seperti fetch data.",
+      "kategori": "React",
+      "favorit": false
+    }
+  ]
+}
