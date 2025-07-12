@@ -2,7 +2,7 @@ import { setActivePinia, createPinia } from 'pinia'
 import { useUserStore } from '@/stores/userStore'
 import { describe, it, expect, beforeEach } from 'vitest'
 
-// Mock localStorage
+
 global.localStorage = {
   store: {},
   getItem(key) {

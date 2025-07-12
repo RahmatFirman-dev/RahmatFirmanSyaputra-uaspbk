@@ -53,7 +53,7 @@ const materi = ref(null)
 
 onMounted(async () => {
   await materiStore.fetchMateri()
-  const id = route.params.id // Jangan parseInt, karena id di JSON adalah string!
+  const id = route.params.id 
   materi.value = materiStore.getMateriById(id)
 })
 
@@ -65,7 +65,7 @@ const handleFavorit = async () => {
 
   if (materi.value) {
     await materiStore.toggleFavorit(materi.value.id)
-    materi.value = materiStore.getMateriById(materi.value.id) // Refresh state
+    materi.value = materiStore.getMateriById(materi.value.id) 
   }
 }
 
@@ -77,7 +77,7 @@ const handleProgress = async () => {
 
   if (materi.value) {
     await materiStore.toggleSelesai(materi.value.id)
-    materi.value = materiStore.getMateriById(materi.value.id) // Refresh state
+    materi.value = materiStore.getMateriById(materi.value.id) 
   }
 }
 </script>

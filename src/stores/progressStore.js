@@ -1,4 +1,4 @@
-// stores/progressStore.js
+
 import { defineStore } from 'pinia'
 
 export const useProgressStore = defineStore('progress', {

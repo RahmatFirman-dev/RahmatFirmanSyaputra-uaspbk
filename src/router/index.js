@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { useUserStore } from '@/stores/userStore'
 
-// Pages
+
 import Home from '@/pages/Home.vue'
 import MateriList from '@/pages/MateriList.vue'
 import MateriDetail from '@/pages/MateriDetail.vue'

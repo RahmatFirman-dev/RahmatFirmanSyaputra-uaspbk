@@ -6,7 +6,7 @@ export const useUserStore = defineStore('user', () => {
   const isLoggedIn = ref(false)
 
   const login = (name) => {
-    if (!name) return  // 🔧 Tambahan: validasi nama kosong
+    if (!name) return  
     username.value = name
     isLoggedIn.value = true
     localStorage.setItem('user', JSON.stringify({ username: name }))

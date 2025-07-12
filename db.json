@@ -7,7 +7,7 @@
       "isi": "### 🔍 Apa Itu HTML?\nHTML adalah bahasa markup standar untuk membuat struktur halaman web. Digunakan untuk menampilkan konten seperti teks, gambar, tautan, dan formulir.\n\n### 🎯 Tujuan\n- Menyusun struktur konten web\n- Menyediakan informasi semantik\n- Dasar sebelum menggunakan CSS/JS\n\n### 🧱 Contoh:\n```html\n<!DOCTYPE html>\n<html>\n  <head><title>Contoh</title></head>\n  <body>\n    <h1>Halo!</h1>\n    <p>Ini paragraf.</p>\n  </body>\n</html>\n```\n\n### 📌 Kesimpulan\nHTML adalah pondasi dari web, harus dikuasai sebelum belajar CSS atau JavaScript.",
       "kategori": "HTML",
       "favorit": true,
-      "selesai": false
+      "selesai": true
     },
     {
       "id": "2",
@@ -15,8 +15,8 @@
       "deskripsi": "Memahami berbagai jenis tag dan atribut HTML.",
       "isi": "### 🧩 Pengantar\nTag HTML digunakan untuk membungkus dan menandai bagian konten. Atribut memberi informasi tambahan.\n\n### 🧱 Tujuan\n- Menjelaskan elemen umum HTML\n- Menjelaskan atribut seperti class, id, href\n\n### 💡 Contoh:\n```html\n<a href='https://example.com' target='_blank'>Kunjungi</a>\n<img src='gambar.jpg' alt='Deskripsi'>\n```\n\n### 📌 Kesimpulan\nAtribut membantu browser mengenali fungsi atau tampilan elemen.",
       "kategori": "HTML",
-      "favorit": true,
-      "selesai": false
+      "favorit": false,
+      "selesai": true
     },
     {
       "id": "3",
@@ -25,7 +25,7 @@
       "isi": "### 📋 Pengantar\nFormulir memungkinkan pengguna mengirim data.\n\n### 🎯 Tujuan\n- Membuat input teks, radio, checkbox, dll\n- Menggunakan atribut action dan method\n\n### ✍️ Contoh:\n```html\n<form action='/submit' method='POST'>\n  <input type='text' name='nama'>\n  <button type='submit'>Kirim</button>\n</form>\n```\n\n### 📌 Kesimpulan\nForm penting untuk interaksi pengguna seperti login dan pencarian.",
       "kategori": "HTML",
       "favorit": false,
-      "selesai": false
+      "selesai": true
     },
     {
       "id": "4",
@@ -105,7 +105,7 @@
       "deskripsi": "Store manajemen data global di Vue.js.",
       "isi": "### 🧠 Pengantar\nPinia menggantikan Vuex sebagai manajemen state resmi di Vue 3.\n\n### 📘 Contoh:\n```js\nimport { defineStore } from 'pinia'\nexport const useStore = defineStore('main', {\n  state: () => ({ count: 0 })\n})\n```\n\n### 📌 Kesimpulan\nPinia memudahkan berbagi state antar komponen.",
       "kategori": "Vue.js",
-      "favorit": false,
+      "favorit": true,
       "selesai": false
     },
     {
