@@ -1,8 +1,8 @@
 import { setActivePinia, createPinia } from 'pinia'
 import { useUserStore } from '@/stores/userStore'
-import { describe, it, expect, beforeEach, vi } from 'vitest'
+import { describe, it, expect, beforeEach } from 'vitest'
 
-// 🔧 Mock localStorage
+// Mock localStorage
 global.localStorage = {
   store: {},
   getItem(key) {
@@ -39,6 +39,14 @@ describe('userStore', () => {
     expect(localStorage.getItem('user')).toContain('rahmat')
   })
 
+  it('tidak melakukan login jika username kosong', () => {
+    const store = useUserStore()
+    store.login('')
+    expect(store.username).toBe('')
+    expect(store.isLoggedIn).toBe(false)
+    expect(localStorage.getItem('user')).toBeNull()
+  })
+
   it('logout menghapus data user', () => {
     const store = useUserStore()
     store.login('rahmat')
@@ -48,11 +56,34 @@ describe('userStore', () => {
     expect(localStorage.getItem('user')).toBeNull()
   })
 
-  it('loadUser memuat dari localStorage', () => {
+  it('loadUser memuat dari localStorage dengan data valid', () => {
     localStorage.setItem('user', JSON.stringify({ username: 'firman' }))
     const store = useUserStore()
     store.loadUser()
     expect(store.username).toBe('firman')
     expect(store.isLoggedIn).toBe(true)
+  })
+
+  it('tidak memuat user jika localStorage berisi JSON tidak valid', () => {
+    localStorage.setItem('user', 'bukan json valid')
+    const store = useUserStore()
+    expect(() => store.loadUser()).not.toThrow()
+    expect(store.username).toBe('')
+    expect(store.isLoggedIn).toBe(false)
+  })
+
+  it('tidak memuat user jika localStorage kosong', () => {
+    localStorage.setItem('user', '')
+    const store = useUserStore()
+    store.loadUser()
+    expect(store.username).toBe('')
+    expect(store.isLoggedIn).toBe(false)
+  })
+
+  it('loadUser tidak crash jika localStorage.getItem mengembalikan null', () => {
+    const store = useUserStore()
+    store.loadUser()
+    expect(store.username).toBe('')
+    expect(store.isLoggedIn).toBe(false)
   })
 })

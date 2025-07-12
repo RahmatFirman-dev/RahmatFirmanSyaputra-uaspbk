@@ -1,4 +1,3 @@
-
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import axios from 'axios'
@@ -33,7 +32,6 @@ export const useMateriStore = defineStore('materi', () => {
     if (index !== -1) {
       const updatedMateri = { ...materi.value[index] }
       updatedMateri.favorit = !updatedMateri.favorit
-
       try {
         await axios.patch(`http://localhost:3001/materi/${id}`, {
           favorit: updatedMateri.favorit
@@ -45,11 +43,29 @@ export const useMateriStore = defineStore('materi', () => {
     }
   }
 
+  const toggleSelesai = async (id) => {
+    const index = materi.value.findIndex((m) => m.id === id)
+    if (index !== -1) {
+      const updatedMateri = { ...materi.value[index] }
+      updatedMateri.selesai = !updatedMateri.selesai
+      try {
+        await axios.patch(`http://localhost:3001/materi/${id}`, {
+          selesai: updatedMateri.selesai
+        })
+        materi.value[index].selesai = updatedMateri.selesai
+      } catch (error) {
+        console.error('Gagal mengupdate status selesai:', error)
+      }
+    }
+  }
+
+  
   return {
     materi,
     fetchMateri,
     getMateriById,
     hapusMateri,
-    toggleFavorit
+    toggleFavorit,
+    toggleSelesai
   }
 })

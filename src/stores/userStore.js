@@ -1,28 +1,40 @@
-
 import { defineStore } from 'pinia'
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 
 export const useUserStore = defineStore('user', () => {
   const username = ref('')
-  const isLoggedIn = computed(() => username.value !== '')
+  const isLoggedIn = ref(false)
 
-  const login = (u) => {
-    username.value = u
-    localStorage.setItem('user', JSON.stringify({ username: u }))
+  const login = (name) => {
+    if (!name) return  // 🔧 Tambahan: validasi nama kosong
+    username.value = name
+    isLoggedIn.value = true
+    localStorage.setItem('user', JSON.stringify({ username: name }))
   }
 
   const logout = () => {
     username.value = ''
+    isLoggedIn.value = false
     localStorage.removeItem('user')
   }
 
   const loadUser = () => {
-    const stored = localStorage.getItem('user')
-    if (stored) {
-      const parsed = JSON.parse(stored)
-      username.value = parsed.username
+    try {
+      const data = JSON.parse(localStorage.getItem('user'))
+      if (data?.username) {
+        username.value = data.username
+        isLoggedIn.value = true
+      }
+    } catch (err) {
+      console.warn('Gagal parsing user dari localStorage:', err)
     }
   }
 
-  return { username, isLoggedIn, login, logout, loadUser }
+  return {
+    username,
+    isLoggedIn,
+    login,
+    logout,
+    loadUser
+  }
 })

@@ -2,6 +2,15 @@
   <div class="container mt-5 pt-navbar">
     <h1 class="mb-4 text-center">Materi Belajar</h1>
 
+    <div class="mb-3">
+      <input
+        v-model="kataKunci"
+        type="text"
+        class="form-control"
+        placeholder="🔍 Cari materi berdasarkan judul..."
+      />
+    </div>
+
     <div v-if="kategoriDipilih" class="alert alert-info text-center">
       Menampilkan materi untuk kategori: <strong>{{ kategoriDipilih }}</strong>
     </div>
@@ -16,12 +25,14 @@
           <div class="card-body">
             <h5 class="card-title">{{ materi.judul }}</h5>
             <p class="card-text">{{ materi.deskripsi }}</p>
+
             <router-link
               :to="`/materi/${materi.id}`"
               class="btn btn-primary btn-sm me-2"
             >
               Lihat Detail
             </router-link>
+
             <button
               @click="handleFavorit(materi)"
               class="btn btn-outline-danger btn-sm"
@@ -35,16 +46,15 @@
       </div>
     </div>
 
-    
     <div v-if="materiTerfilter.length === 0" class="text-center text-muted mt-4">
-      <p>Tidak ada materi yang tersedia untuk kategori ini.</p>
+      <p>Tidak ada materi yang cocok dengan pencarian atau kategori.</p>
     </div>
   </div>
 </template>
 
 <script setup>
 import { useRoute } from 'vue-router'
-import { computed, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useMateriStore } from '@/stores/materiStore'
 import { useUserStore } from '@/stores/userStore'
 
@@ -52,22 +62,29 @@ const store = useMateriStore()
 const userStore = useUserStore()
 const route = useRoute()
 
+const kataKunci = ref('')
 const kategoriDipilih = computed(() => route.query.kategori)
 
 const materiTerfilter = computed(() => {
-  return kategoriDipilih.value
-    ? store.materi.filter((m) => m.kategori === kategoriDipilih.value)
-    : store.materi
+  return store.materi.filter((m) => {
+    const cocokKategori = kategoriDipilih.value
+      ? m.kategori === kategoriDipilih.value
+      : true
+
+    const cocokJudul = m.judul.toLowerCase().includes(kataKunci.value.toLowerCase())
+
+    return cocokKategori && cocokJudul
+  })
 })
 
-const handleFavorit = (materi) => {
+const handleFavorit = async (materi) => {
   if (!userStore.isLoggedIn) {
     alert('Silakan login terlebih dahulu untuk menambahkan favorit.')
     return
   }
-  store.toggleFavorit(materi.id)
+  await store.toggleFavorit(materi.id)
 }
-
+  
 onMounted(() => {
   store.fetchMateri()
 })

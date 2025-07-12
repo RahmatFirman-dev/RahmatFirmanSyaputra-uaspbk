@@ -11,6 +11,9 @@
           <li class="nav-item"><RouterLink class="nav-link" to="/">Home</RouterLink></li>
           <li class="nav-item"><RouterLink class="nav-link" to="/materi">Materi</RouterLink></li>
           <li class="nav-item"><RouterLink class="nav-link" to="/favorit">Favorit</RouterLink></li>
+          <li class="nav-item"><RouterLink class="nav-link" to="/kategori">Kategori</RouterLink></li>
+          <li class="nav-item"><RouterLink class="nav-link" to="/progress">Progress</RouterLink></li>
+          <li class="nav-item"><RouterLink class="nav-link" to="/faq">FAQ</RouterLink></li>
         </ul>
 
         <div class="d-flex align-items-center">

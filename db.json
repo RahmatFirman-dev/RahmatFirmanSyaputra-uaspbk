@@ -2,83 +2,219 @@
   "materi": [
     {
       "id": "1",
-      "judul": "Dasar HTML",
-      "deskripsi": "Tag dan struktur HTML dasar",
-      "isi": "🔰 Pengertian HTML\nHTML (HyperText Markup Language) adalah bahasa markup standar untuk menyusun halaman web. HTML bukan bahasa pemrograman, tetapi merupakan pondasi utama sebuah halaman web. HTML menentukan heading, paragraf, tautan, gambar, tabel, daftar, dan struktur layout lainnya.\n\n🧱 Struktur Dasar HTML:\n```html",
+      "judul": "Pengantar HTML",
+      "deskripsi": "Dasar-dasar struktur HTML untuk halaman web.",
+      "isi": "### 🔍 Apa Itu HTML?\nHTML adalah bahasa markup standar untuk membuat struktur halaman web. Digunakan untuk menampilkan konten seperti teks, gambar, tautan, dan formulir.\n\n### 🎯 Tujuan\n- Menyusun struktur konten web\n- Menyediakan informasi semantik\n- Dasar sebelum menggunakan CSS/JS\n\n### 🧱 Contoh:\n```html\n<!DOCTYPE html>\n<html>\n  <head><title>Contoh</title></head>\n  <body>\n    <h1>Halo!</h1>\n    <p>Ini paragraf.</p>\n  </body>\n</html>\n```\n\n### 📌 Kesimpulan\nHTML adalah pondasi dari web, harus dikuasai sebelum belajar CSS atau JavaScript.",
       "kategori": "HTML",
-      "favorit": false
+      "favorit": true,
+      "selesai": false
     },
     {
       "id": "2",
-      "judul": "CSS Dasar",
-      "deskripsi": "Belajar styling dasar dengan CSS",
-      "isi": "🎨 CSS (Cascading Style Sheets) digunakan untuk mendesain tampilan halaman HTML.\n\n📘 Contoh dasar:\n```css\nbody {\n  background-color: #f5f5f5;\n  color: #333;\n  font-family: Arial;\n}\n```\n\n🧱 Komponen Utama:\n- Selector (Elemen, class, ID)\n- Properti (property)\n- Nilai (value)\n\n💡 Jenis Selector:\n- Elemen: `p`, `h1`\n- Class: `.judul`\n- ID: `#utama`\n\n⚙️ Properti Populer:\n- `color`, `background-color`\n- `margin`, `padding`\n- `font-size`, `text-align`, `display`\n\n📌 CSS mendukung responsive design, animasi, dan transisi.",
-      "kategori": "CSS",
-      "favorit": false
+      "judul": "Tag dan Atribut HTML",
+      "deskripsi": "Memahami berbagai jenis tag dan atribut HTML.",
+      "isi": "### 🧩 Pengantar\nTag HTML digunakan untuk membungkus dan menandai bagian konten. Atribut memberi informasi tambahan.\n\n### 🧱 Tujuan\n- Menjelaskan elemen umum HTML\n- Menjelaskan atribut seperti class, id, href\n\n### 💡 Contoh:\n```html\n<a href='https://example.com' target='_blank'>Kunjungi</a>\n<img src='gambar.jpg' alt='Deskripsi'>\n```\n\n### 📌 Kesimpulan\nAtribut membantu browser mengenali fungsi atau tampilan elemen.",
+      "kategori": "HTML",
+      "favorit": true,
+      "selesai": false
     },
     {
       "id": "3",
-      "judul": "JavaScript Variabel",
-      "deskripsi": "Belajar membuat variabel JS",
-      "isi": "💡 Variabel menyimpan data yang akan digunakan dalam logika program JavaScript.\n\n🧠 Tiga Cara Deklarasi:\n```js\nvar x = 10; // lama\nlet y = 20; // baru\nconst z = 30; // tidak bisa diubah\n```\n\n📊 Tipe Data:\n- String: \"Halo\"\n- Number: 123\n- Boolean: true/false\n- Array: [1, 2, 3]\n- Object: { nama: \"Andi\" }\n\n📌 Variabel digunakan dalam fungsi, kondisi, perulangan, dan manipulasi DOM.",
-      "kategori": "JavaScript",
-      "favorit": false
+      "judul": "Formulir dan Input HTML",
+      "deskripsi": "Cara membuat input, tombol, dan form.",
+      "isi": "### 📋 Pengantar\nFormulir memungkinkan pengguna mengirim data.\n\n### 🎯 Tujuan\n- Membuat input teks, radio, checkbox, dll\n- Menggunakan atribut action dan method\n\n### ✍️ Contoh:\n```html\n<form action='/submit' method='POST'>\n  <input type='text' name='nama'>\n  <button type='submit'>Kirim</button>\n</form>\n```\n\n### 📌 Kesimpulan\nForm penting untuk interaksi pengguna seperti login dan pencarian.",
+      "kategori": "HTML",
+      "favorit": false,
+      "selesai": false
     },
     {
       "id": "4",
-      "judul": "Vue 3 Composition API",
-      "deskripsi": "Struktur baru Vue 3 dengan setup()",
-      "isi": "🧱 Composition API adalah pendekatan baru dalam Vue 3 yang memungkinkan logika komponen lebih modular.\n\n📘 Contoh:\n```vue\n<script setup>\nimport { ref } from 'vue'\nconst count = ref(0)\n</script>\n\n<template>\n  <button @click=\"count++\">{{ count }}</button>\n</template>\n```\n\n💡 Keuntungan:\n- Lebih fleksibel dan reusable\n- Lebih mudah dikelola di proyek besar\n- Mendukung TypeScript dengan baik",
-      "kategori": "Vue.js",
-      "favorit": false
+      "judul": "Dasar CSS",
+      "deskripsi": "Memahami selector dan properti dasar CSS.",
+      "isi": "### 🎨 Pengantar\nCSS digunakan untuk mendesain tampilan web.\n\n### 🎯 Tujuan\n- Styling teks, warna, ukuran\n- Menentukan margin, padding\n\n### 📘 Contoh:\n```css\np {\n  color: blue;\n  font-size: 16px;\n}\n```\n\n### 📌 Kesimpulan\nCSS memperindah halaman HTML dengan fleksibilitas tinggi.",
+      "kategori": "CSS",
+      "favorit": false,
+      "selesai": false
     },
     {
       "id": "5",
-      "judul": "Bootstrap Grid System",
-      "deskripsi": "Cara menggunakan grid responsive",
-      "isi": "📐 Bootstrap menggunakan sistem grid 12 kolom untuk tata letak responsif.\n\n📘 Contoh dasar:\n```html\n<div class=\"row\">\n  <div class=\"col-md-6\">Kolom Kiri</div>\n  <div class=\"col-md-6\">Kolom Kanan</div>\n</div>\n```\n\n⚙️ Grid memungkinkan layout adaptif untuk berbagai ukuran layar.\n\n📌 Gunakan breakpoint seperti:\n- `col-sm-`, `col-md-`, `col-lg-` untuk mengatur responsivitas.",
-      "kategori": "Bootstrap",
-      "favorit": false
+      "judul": "Box Model CSS",
+      "deskripsi": "Penjelasan margin, border, padding, dan content.",
+      "isi": "### 📦 Pengantar\nBox model adalah dasar layout di CSS.\n\n### 🎯 Tujuan\n- Memahami struktur tiap elemen\n- Mengatur ruang antar elemen\n\n### 💡 Komponen:\n- Content\n- Padding\n- Border\n- Margin\n\n### 📘 Contoh:\n```css\ndiv {\n  margin: 10px;\n  padding: 20px;\n  border: 1px solid #000;\n}\n```\n\n### 📌 Kesimpulan\nBox model penting untuk kontrol layout halaman.",
+      "kategori": "CSS",
+      "favorit": false,
+      "selesai": false
     },
     {
       "id": "6",
-      "judul": "Tailwind CSS Utility Classes",
-      "deskripsi": "Konsep atomic CSS",
-      "isi": "🌀 Tailwind CSS adalah framework CSS berbasis utility class. Setiap class melakukan satu tugas spesifik.\n\n📘 Contoh:\n```html\n<div class=\"bg-blue-500 text-white p-4 rounded\">\n  Ini konten dengan Tailwind\n</div>\n```\n\n🔍 Keuntungan:\n- Cepat tanpa harus menulis CSS kustom\n- Cocok untuk prototyping\n\n📌 Class populer: `p-4`, `m-2`, `text-xl`, `bg-gray-200`, `flex`, `grid`, `rounded`.",
-      "kategori": "Tailwind CSS",
-      "favorit": false
+      "judul": "Flexbox CSS",
+      "deskripsi": "Teknik layout fleksibel satu dimensi.",
+      "isi": "### 🧭 Pengantar\nFlexbox membantu menyusun elemen secara responsif.\n\n### 🎯 Tujuan\n- Menyusun elemen horizontal/vertikal\n- Menyusun align dan justify\n\n### 📘 Contoh:\n```css\n.container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n```\n\n### 📌 Kesimpulan\nFlexbox sangat penting untuk layout modern.",
+      "kategori": "CSS",
+      "favorit": false,
+      "selesai": false
     },
     {
       "id": "7",
-      "judul": "Dasar Git",
-      "deskripsi": "Version Control System",
-      "isi": "🔄 Git adalah sistem version control untuk melacak perubahan kode secara efisien.\n\n📘 Perintah Dasar:\n```bash\ngit init\ngit add .\ngit commit -m \"Initial commit\"\ngit push origin main\n```\n\n🧠 Konsep:\n- Commit: Snapshot kode\n- Branch: Jalur pengembangan\n- Merge: Gabungkan branch\n\n📌 Gunakan bersama GitHub untuk kolaborasi tim.",
-      "kategori": "Git & GitHub",
-      "favorit": false
+      "judul": "Variabel JavaScript",
+      "deskripsi": "Penggunaan var, let, dan const.",
+      "isi": "### 🧠 Pengantar\nVariabel menyimpan data untuk digunakan dalam program JS.\n\n### 🎯 Tujuan\n- Mengenal scope dan hoisting\n\n### 📘 Contoh:\n```js\nlet x = 10;\nconst y = 5;\nvar z = 20;\n```\n\n### 📌 Kesimpulan\nGunakan `let` atau `const` untuk praktik modern.",
+      "kategori": "JavaScript",
+      "favorit": false,
+      "selesai": false
     },
     {
       "id": "8",
-      "judul": "REST API 101",
-      "deskripsi": "Konsep dasar REST dan endpoint",
-      "isi": "🌐 REST API digunakan untuk komunikasi data antara client dan server melalui HTTP.\n\n📘 HTTP Methods:\n- GET: Ambil data\n- POST: Tambah data\n- PUT: Update data\n- DELETE: Hapus data\n\n📦 Contoh Endpoint:\n```http\nGET /users\nPOST /users\nPUT /users/1\nDELETE /users/1\n```\n\n📌 Digunakan dengan axios atau fetch di frontend.",
-      "kategori": "REST API",
-      "favorit": false
+      "judul": "Fungsi & Arrow Function",
+      "deskripsi": "Cara mendefinisikan dan menggunakan fungsi.",
+      "isi": "### 🎯 Tujuan\n- Memecah kode menjadi blok reusable\n\n### 📘 Contoh:\n```js\nfunction tambah(a, b) {\n  return a + b;\n}\n\nconst kurang = (a, b) => a - b;\n```\n\n### 📌 Kesimpulan\nFungsi adalah dasar pemrograman JavaScript.",
+      "kategori": "JavaScript",
+      "favorit": false,
+      "selesai": false
     },
     {
       "id": "9",
-      "judul": "Media Queries CSS",
-      "deskripsi": "Responsive dengan media queries",
-      "isi": "📱 Media queries memungkinkan halaman web menyesuaikan tampilannya dengan ukuran layar.\n\n📘 Contoh:\n```css\n@media (max-width: 768px) {\n  .container {\n    flex-direction: column;\n  }\n}\n```\n\n🎯 Digunakan bersama Flexbox atau Grid Layout untuk desain yang adaptif dan user-friendly.",
-      "kategori": "Responsive Design",
-      "favorit": false
+      "judul": "DOM Manipulation",
+      "deskripsi": "Berinteraksi dengan elemen HTML lewat JS.",
+      "isi": "### 📋 Pengantar\nDOM memungkinkan manipulasi elemen secara dinamis.\n\n### 📘 Contoh:\n```js\ndocument.getElementById('judul').innerText = 'Baru';\n```\n\n### 📌 Kesimpulan\nDOM adalah cara mengubah konten HTML via JS.",
+      "kategori": "JavaScript",
+      "favorit": false,
+      "selesai": false
     },
     {
       "id": "10",
-      "judul": "React Props & State",
-      "deskripsi": "Dasar komponen React",
-      "isi": "⚛️ React adalah library untuk membangun UI berbasis komponen.\n\n📌 Props digunakan untuk mengirim data dari parent ke child:\n```js\n<MyComponent title=\"Halo\" />\n```\n\n📌 State digunakan untuk menyimpan data internal:\n```js\nconst [count, setCount] = useState(0)\n```\n\n🧠 Props bersifat readonly, sedangkan state bisa diubah. Gunakan `useEffect()` untuk efek samping seperti fetch data.",
+      "judul": "Vue 3 Composition API",
+      "deskripsi": "Pendekatan baru dalam Vue 3.",
+      "isi": "### 🧱 Pengantar\nComposition API menyederhanakan penggunaan state dan reaktivitas.\n\n### 📘 Contoh:\n```vue\n<script setup>\nimport { ref } from 'vue'\nconst count = ref(0)\n</script>\n```\n\n### 📌 Kesimpulan\nLebih modular, cocok untuk proyek besar.",
+      "kategori": "Vue.js",
+      "favorit": false,
+      "selesai": false
+    },
+    {
+      "id": "11",
+      "judul": "Routing dengan Vue Router",
+      "deskripsi": "Navigasi antar halaman di Vue.js",
+      "isi": "### 🔀 Pengantar\nVue Router mengatur navigasi SPA (Single Page Application).\n\n### 📘 Contoh:\n```js\nconst routes = [\n  { path: '/', component: Home },\n  { path: '/about', component: About },\n]\n```\n\n### 📌 Kesimpulan\nVue Router penting dalam pembuatan aplikasi multi-halaman.",
+      "kategori": "Vue.js",
+      "favorit": false,
+      "selesai": false
+    },
+    {
+      "id": "12",
+      "judul": "State Management dengan Pinia",
+      "deskripsi": "Store manajemen data global di Vue.js.",
+      "isi": "### 🧠 Pengantar\nPinia menggantikan Vuex sebagai manajemen state resmi di Vue 3.\n\n### 📘 Contoh:\n```js\nimport { defineStore } from 'pinia'\nexport const useStore = defineStore('main', {\n  state: () => ({ count: 0 })\n})\n```\n\n### 📌 Kesimpulan\nPinia memudahkan berbagi state antar komponen.",
+      "kategori": "Vue.js",
+      "favorit": false,
+      "selesai": false
+    },
+    {
+      "id": "13",
+      "judul": "Bootstrap Grid System",
+      "deskripsi": "Dasar layout responsif 12 kolom.",
+      "isi": "### 🧱 Pengantar\nBootstrap menggunakan sistem grid 12 kolom.\n\n### 📘 Contoh:\n```html\n<div class='row'>\n  <div class='col-6'>Kiri</div>\n  <div class='col-6'>Kanan</div>\n</div>\n```\n\n### 📌 Kesimpulan\nGrid sangat membantu membuat layout responsif.",
+      "kategori": "Bootstrap",
+      "favorit": false,
+      "selesai": false
+    },
+    {
+      "id": "14",
+      "judul": "Komponen Bootstrap",
+      "deskripsi": "Button, alert, navbar, dan lainnya.",
+      "isi": "### 🎯 Tujuan\n- Menggunakan komponen siap pakai dari Bootstrap\n\n### 📘 Contoh:\n```html\n<button class='btn btn-primary'>Klik</button>\n<div class='alert alert-success'>Berhasil</div>\n```\n\n### 📌 Kesimpulan\nKomponen Bootstrap mempercepat pengembangan UI.",
+      "kategori": "Bootstrap",
+      "favorit": false,
+      "selesai": false
+    },
+    {
+      "id": "15",
+      "judul": "Formulir Bootstrap",
+      "deskripsi": "Styling form dengan Bootstrap.",
+      "isi": "### 📘 Contoh:\n```html\n<form>\n  <input class='form-control'>\n  <button class='btn btn-success'>Submit</button>\n</form>\n```\n\n### 📌 Kesimpulan\nForm di Bootstrap sudah otomatis responsif dan rapi.",
+      "kategori": "Bootstrap",
+      "favorit": false,
+      "selesai": false
+    },
+    {
+      "id": "16",
+      "judul": "Dasar Git",
+      "deskripsi": "Version control sistem.",
+      "isi": "### 🧠 Perintah:\n```bash\ngit init\ngit add .\ngit commit -m 'pesan'\n```\n\n### 📌 Kesimpulan\nGit menyimpan versi kode untuk tracking perubahan.",
+      "kategori": "Git & GitHub",
+      "favorit": false,
+      "selesai": false
+    },
+    {
+      "id": "17",
+      "judul": "Branch dan Merge",
+      "deskripsi": "Bekerja dengan cabang di Git.",
+      "isi": "### 📘 Perintah:\n```bash\ngit branch fitur-baru\ngit checkout fitur-baru\n```\n\n### 📌 Kesimpulan\nGunakan branch untuk pengembangan terpisah.",
+      "kategori": "Git & GitHub",
+      "favorit": false,
+      "selesai": false
+    },
+    {
+      "id": "18",
+      "judul": "Push ke GitHub",
+      "deskripsi": "Sinkronisasi lokal dan GitHub.",
+      "isi": "### 📘 Contoh:\n```bash\ngit remote add origin https://github.com/user/repo.git\ngit push -u origin main\n```\n\n### 📌 Kesimpulan\nGitHub mempermudah kolaborasi online.",
+      "kategori": "Git & GitHub",
+      "favorit": false,
+      "selesai": false
+    },
+    {
+      "id": "19",
+      "judul": "Dasar React",
+      "deskripsi": "Komponen dan JSX.",
+      "isi": "### 📘 Contoh:\n```jsx\nfunction App() {\n  return <h1>Halo React</h1>\n}\n```\n\n### 📌 Kesimpulan\nReact menyusun UI dalam komponen kecil reusable.",
       "kategori": "React",
-      "favorit": false
+      "favorit": false,
+      "selesai": false
+    },
+    {
+      "id": "20",
+      "judul": "State & Props",
+      "deskripsi": "Penggunaan data internal & eksternal.",
+      "isi": "### 📘 Contoh:\n```jsx\nconst [count, setCount] = useState(0)\n```\n\n### 📌 Kesimpulan\nState berubah, Props tetap dari parent ke child.",
+      "kategori": "React",
+      "favorit": false,
+      "selesai": false
+    },
+    {
+      "id": "21",
+      "judul": "useEffect React",
+      "deskripsi": "Efek samping seperti fetch API.",
+      "isi": "### 📘 Contoh:\n```jsx\nuseEffect(() => {\n  fetch('/data')\n}, [])\n```\n\n### 📌 Kesimpulan\nuseEffect jalan saat render atau update data.",
+      "kategori": "React",
+      "favorit": false,
+      "selesai": false
+    },
+    {
+      "id": "22",
+      "judul": "Dasar Tailwind CSS",
+      "deskripsi": "Utility-first CSS framework.",
+      "isi": "### 📘 Contoh:\n```html\n<div class='bg-blue-500 text-white p-4'>Halo</div>\n```\n\n### 📌 Kesimpulan\nTailwind cepat karena styling langsung di class.",
+      "kategori": "Tailwind CSS",
+      "favorit": false,
+      "selesai": false
+    },
+    {
+      "id": "23",
+      "judul": "Responsif di Tailwind",
+      "deskripsi": "Gunakan breakpoint seperti md, lg.",
+      "isi": "### 📘 Contoh:\n```html\n<div class='text-sm md:text-lg'>Teks</div>\n```\n\n### 📌 Kesimpulan\nTailwind responsif dengan class yang simpel.",
+      "kategori": "Tailwind CSS",
+      "favorit": false,
+      "selesai": false
+    },
+    {
+      "id": "24",
+      "judul": "Layout Flex & Grid",
+      "deskripsi": "Menyusun layout modern.",
+      "isi": "### 📘 Contoh:\n```html\n<div class='flex justify-between'>\n  <div>1</div>\n  <div>2</div>\n</div>\n```\n\n### 📌 Kesimpulan\nGunakan flex atau grid untuk struktur halaman.",
+      "kategori": "Tailwind CSS",
+      "favorit": false,
+      "selesai": false
     }
   ]
 }
